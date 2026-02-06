@@ -26,7 +26,7 @@ const Hero: React.FC<HeroProps> = ({ onPrimaryCta }) => {
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-400 leading-relaxed mb-12 max-w-3xl mx-auto">
-            Wyzela LLC provides premium patent drafting and invention strategy services for technical founders, 
+            Wyzela provides premium patent drafting and invention strategy services for technical founders, 
             R&D teams, and individual inventors, offering accessible entry points without compromising on quality.
           </p>
           

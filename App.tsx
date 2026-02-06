@@ -24,7 +24,7 @@ const App: React.FC = () => {
           <div className="container mx-auto px-6 max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">From invention to defensible IP</h2>
             <p className="text-xl text-slate-400 leading-relaxed">
-              Wyzela LLC helps innovators transform early-stage technical ideas into clear, well-structured patent applications 
+              Wyzela helps innovators transform early-stage technical ideas into clear, well-structured patent applications 
               aligned with real-world product and technology roadmaps. With over 20 years of engineering experience, we bridge 
               the gap between technical invention and effective intellectual property protection.
             </p>
@@ -52,12 +52,12 @@ const App: React.FC = () => {
                 >
                   Book a consultation
                 </button>
-                <button 
-                  onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
+                <a
+                  href="mailto:info@wyzela.com"
                   className="px-8 py-4 bg-slate-900 text-blue-400 border border-blue-500/20 rounded-xl font-semibold hover:bg-slate-800 transition-all"
                 >
-                  Contact Wyzela LLC
-                </button>
+                  Contact Wyzela
+                </a>
               </div>
             </div>
           </div>
@@ -77,18 +77,28 @@ const App: React.FC = () => {
               </button>
             </div>
             <p className="text-slate-400 mb-6">Tell us briefly about your innovation goals. We'll respond within 24 hours.</p>
-            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert('Inquiry sent successfully!'); toggleModal(); }}>
+            <form className="space-y-4" onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const name = (form.elements.namedItem('name') as HTMLInputElement).value;
+              const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+              const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+              const subject = encodeURIComponent(`Inquiry from ${name}`);
+              const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+              window.location.href = `mailto:info@wyzela.com?subject=${subject}&body=${body}`;
+              toggleModal();
+            }}>
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-1">Name</label>
-                <input required type="text" className="w-full px-4 py-2 bg-slate-800 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Jane Doe" />
+                <input required name="name" type="text" className="w-full px-4 py-2 bg-slate-800 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Jane Doe" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-1">Email</label>
-                <input required type="email" className="w-full px-4 py-2 bg-slate-800 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="jane@company.com" />
+                <input required name="email" type="email" className="w-full px-4 py-2 bg-slate-800 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="jane@company.com" />
               </div>
               <div>
                 <label className="block text-sm font-medium text-slate-300 mb-1">Message</label>
-                <textarea required rows={4} className="w-full px-4 py-2 bg-slate-800 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Briefly describe your patent needs..."></textarea>
+                <textarea required name="message" rows={4} className="w-full px-4 py-2 bg-slate-800 border border-slate-700 text-white rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Briefly describe your patent needs..."></textarea>
               </div>
               <button type="submit" className="w-full py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition-colors">
                 Send Request

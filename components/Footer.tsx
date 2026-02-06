@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white font-bold text-lg">W</div>
-              <span className="text-lg font-bold tracking-tight text-white font-heading">Wyzela LLC</span>
+              <span className="text-lg font-bold tracking-tight text-white font-heading">Wyzela</span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed">
               Boutique patent agent practice dedicated to protecting the technical vision of serious innovators.
@@ -54,13 +54,13 @@ const Footer: React.FC = () => {
             <div className="max-w-3xl">
               <p className="text-[11px] text-slate-600 leading-relaxed uppercase tracking-widest mb-2 font-bold">Footer Disclaimer</p>
               <p className="text-[12px] text-slate-500 leading-relaxed">
-                Wyzela LLC provides patent agent and technology consulting services. This website is for informational purposes only 
+                Wyzela Consulting LLC provides patent agent and technology consulting services. This website is for informational purposes only 
                 and does not constitute legal advice. No professional relationship is formed by submitting an inquiry or visiting this site. 
                 Engagements are subject to a written agreement. Registered with the USPTO as a Patent Agent.
               </p>
             </div>
             <div className="text-[12px] text-slate-600 whitespace-nowrap">
-              &copy; {currentYear} Wyzela LLC. All rights reserved.
+              &copy; {currentYear} Wyzela Consulting LLC. All rights reserved.
             </div>
           </div>
         </div>

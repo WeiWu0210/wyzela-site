@@ -44,7 +44,7 @@ const WhyWyzela: React.FC = () => {
 
             <div className="mt-12 p-6 bg-slate-900 border border-slate-800 rounded-2xl">
               <p className="text-slate-400 italic leading-relaxed">
-                Wyzela LLC is built on the philosophy that intellectual property is most powerful when it remains closely tethered 
+                Wyzela is built on the philosophy that intellectual property is most powerful when it remains closely tethered 
                 to technical reality and business strategy.
               </p>
             </div>
