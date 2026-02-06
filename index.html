@@ -12,7 +12,39 @@
     <link rel="stylesheet" href="/index.css">
 </head>
 <body class="bg-slate-950 text-slate-100">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Inline skeleton shown instantly while JS loads; replaced by React on mount -->
+      <style>
+        .sk-nav{position:fixed;top:0;left:0;right:0;z-index:40;padding:1.25rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+        .sk-logo{display:flex;align-items:center;gap:.5rem}
+        .sk-logo-box{width:2.5rem;height:2.5rem;background:#2563eb;border-radius:.5rem;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1.25rem}
+        .sk-logo-text{font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:-.025em}
+        .sk-hero{padding:10rem 1.5rem 8rem;text-align:center;max-width:56rem;margin:0 auto}
+        .sk-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.25rem .75rem;border-radius:9999px;background:rgba(30,58,138,.3);border:1px solid rgba(59,130,246,.2);color:#60a5fa;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1.5rem}
+        .sk-dot{width:.5rem;height:.5rem;border-radius:9999px;background:#3b82f6}
+        .sk-h1{font-size:clamp(3rem,7vw,4.5rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:2rem}
+        .sk-h1 span{background:linear-gradient(135deg,#60a5fa,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .sk-p{font-size:clamp(1.125rem,2.5vw,1.5rem);color:#94a3b8;line-height:1.6;margin-bottom:3rem;max-width:48rem;margin-left:auto;margin-right:auto}
+        .sk-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+        .sk-btn-pri{padding:1.25rem 2.5rem;background:#2563eb;color:#fff;font-size:1.125rem;font-weight:700;border-radius:1rem;border:none;cursor:pointer}
+        .sk-btn-sec{padding:1.25rem 2.5rem;background:#0f172a;color:#cbd5e1;font-size:1.125rem;font-weight:700;border-radius:1rem;border:1px solid #1e293b;cursor:pointer}
+      </style>
+      <nav class="sk-nav">
+        <div class="sk-logo">
+          <div class="sk-logo-box">W</div>
+          <span class="sk-logo-text">Wyzela <span style="color:#3b82f6;font-style:italic;font-weight:400;text-transform:lowercase">LLC</span></span>
+        </div>
+      </nav>
+      <div class="sk-hero">
+        <div class="sk-badge"><span class="sk-dot"></span> Boutique Patent Agent Practice</div>
+        <h1 class="sk-h1">For Serious <span>Innovators</span></h1>
+        <p class="sk-p">Wyzela provides premium patent drafting and invention strategy services for technical founders, R&D teams, and individual inventors, offering accessible entry points without compromising on quality.</p>
+        <div class="sk-btns">
+          <button class="sk-btn-pri">Book a confidential consultation</button>
+          <button class="sk-btn-sec">Explore services</button>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>
