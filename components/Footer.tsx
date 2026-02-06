@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
               Located in the United States.<br/>
               Serving innovators globally.
             </p>
-            <p className="text-sm font-bold text-slate-300 hover:text-blue-400 transition-colors cursor-pointer">info@wyzela.com</p>
+            <a href="mailto:info@wyzela.com" className="text-sm font-bold text-slate-300 hover:text-blue-400 transition-colors">info@wyzela.com</a>
           </div>
         </div>
 
