@@ -21,10 +21,11 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-white mb-6">Services</h4>
             <ul className="space-y-4 text-sm text-slate-500">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Patent Drafting</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">IP Strategy</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">Provisional Filings</a></li>
               <li><a href="#" className="hover:text-blue-400 transition-colors">Prior Art Searches</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Patent Drafting</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">Patent Prosecution</a></li>
+              <li><a href="#" className="hover:text-blue-400 transition-colors">IP Strategy</a></li>
+  
             </ul>
           </div>
 
