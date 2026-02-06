@@ -16,9 +16,13 @@ const WhyWyzela: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-16 items-center">
           <div className="md:w-1/2">
             <div className="relative">
-              <img 
-                src="https://picsum.photos/seed/patent/800/800" 
-                alt="Technical Drafting" 
+              <img
+                src="https://picsum.photos/seed/patent/800/800"
+                alt="Technical Drafting"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={800}
                 className="rounded-3xl shadow-2xl grayscale brightness-75 border border-slate-800"
               />
               <div className="absolute -bottom-10 -right-10 bg-blue-600 p-8 rounded-3xl text-white shadow-xl hidden lg:block max-w-[280px]">
